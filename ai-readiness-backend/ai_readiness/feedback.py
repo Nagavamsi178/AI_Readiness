@@ -15,6 +15,7 @@ DETAILS = {
     "Transforming": "(80–100%) AI becoming strategic. Focus on governance, talent and innovation.",
 }
 
+
 def generate_feedback(dim_scores, overall):
     category = get_category(overall)
 
@@ -35,6 +36,6 @@ def generate_feedback(dim_scores, overall):
             f"Prioritize improvement in **{worst}**.",
             "Identify top 2–3 ROI-focused AI use cases.",
             "Develop internal AI talent and literacy.",
-            "Create short-term pilots and long-term roadmap."
-        ]
+            "Create short-term pilots and long-term roadmap.",
+        ],
     }

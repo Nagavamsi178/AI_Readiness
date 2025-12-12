@@ -6,43 +6,45 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ai_readiness', '0001_initial'),
+        ("ai_readiness", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='assessment',
-            name='category',
+            model_name="assessment",
+            name="category",
             field=models.CharField(blank=True, max_length=50, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='dimension_scores',
+            model_name="assessment",
+            name="dimension_scores",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='feedback_category_detail',
+            model_name="assessment",
+            name="feedback_category_detail",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='feedback_profile',
+            model_name="assessment",
+            name="feedback_profile",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='feedback_recommended_actions',
+            model_name="assessment",
+            name="feedback_recommended_actions",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='feedback_summary',
+            model_name="assessment",
+            name="feedback_summary",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='assessment',
-            name='overall_score',
-            field=models.DecimalField(blank=True, decimal_places=1, max_digits=5, null=True),
+            model_name="assessment",
+            name="overall_score",
+            field=models.DecimalField(
+                blank=True, decimal_places=1, max_digits=5, null=True
+            ),
         ),
     ]

@@ -10,33 +10,55 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Assessment',
+            name="Assessment",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('email', models.EmailField(db_index=True, max_length=254)),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("email", models.EmailField(db_index=True, max_length=254)),
+                ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
             ],
         ),
         migrations.CreateModel(
-            name='Answer',
+            name="Answer",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('question_id', models.CharField(max_length=10)),
-                ('section', models.CharField(max_length=100)),
-                ('question_text', models.TextField()),
-                ('answer_type', models.CharField(max_length=20)),
-                ('raw_value', models.JSONField()),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
-                ('assessment', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='answers', to='ai_readiness.assessment')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("question_id", models.CharField(max_length=10)),
+                ("section", models.CharField(max_length=100)),
+                ("question_text", models.TextField()),
+                ("answer_type", models.CharField(max_length=20)),
+                ("raw_value", models.JSONField()),
+                ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "assessment",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="answers",
+                        to="ai_readiness.assessment",
+                    ),
+                ),
             ],
             options={
-                'unique_together': {('assessment', 'question_id')},
+                "unique_together": {("assessment", "question_id")},
             },
         ),
     ]

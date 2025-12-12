@@ -7,34 +7,32 @@ CHOICE_SCORES = {
     "Fully structured": 10,
     "Partially structured": 6,
     "Mostly unstructured": 3,
-
     "Yes": 9,
     "No": 3,
     "Planning": 6,
     "Pilot / Limited": 7,
     "Pilot / POC": 7,
     "Experimenting": 7,
-
     "On-prem": 5,
     "Cloud": 9,
     "Hybrid": 8,
-
     "Strong team": 9,
     "Basic knowledge": 7,
     "Exploring": 5,
     "None": 2,
-
     "Immediate": 10,
     "Within 3 months": 8,
     "Within 6–12 months": 6,
     "Just exploring": 4,
 }
 
+
 def score_multi_choice(answer_list, options):
     if not answer_list:
         return 0
     ratio = min(len(answer_list), len(options)) / len(options)
     return ratio * 10
+
 
 def compute_dimension_scores(answers: dict):
     totals = {d: 0.0 for d in DIMENSIONS}
@@ -72,11 +70,13 @@ def compute_dimension_scores(answers: dict):
 
     return result
 
+
 def compute_overall_score(dim_scores: dict):
     if not dim_scores:
         return 0
     avg = sum(dim_scores.values()) / len(dim_scores)
     return round(avg * 10, 1)
+
 
 def get_category(score):
     if score < 40:

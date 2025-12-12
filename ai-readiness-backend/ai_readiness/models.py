@@ -11,7 +11,8 @@ class Assessment(models.Model):
 
     # Scores saved after calculation
     overall_score = models.DecimalField(
-    max_digits=5, decimal_places=1, null=True, blank=True)
+        max_digits=5, decimal_places=1, null=True, blank=True
+    )
     category = models.CharField(max_length=50, null=True, blank=True)
 
     # Breakdown (JSON) e.g. {"data": 6.2, "adoption": 6.7, ...}
@@ -35,6 +36,7 @@ class Answer(models.Model):
     Stores each answer for a given assessment.
     One row per question per submission.
     """
+
     assessment = models.ForeignKey(
         Assessment,
         on_delete=models.CASCADE,

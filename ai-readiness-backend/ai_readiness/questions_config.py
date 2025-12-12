@@ -4,27 +4,26 @@ QUESTIONS = [
         "id": "A1",
         "section": "Business Overview",
         "label": "What industry does your organization operate in?",
-        "type": "text"
+        "type": "text",
     },
     {
         "id": "A2",
         "section": "Business Overview",
         "label": "What are your top 3 business priorities for the next 12 months?",
-        "type": "text"
+        "type": "text",
     },
     {
         "id": "A3",
         "section": "Business Overview",
         "label": "What operational challenges are you looking to solve?",
-        "type": "text"
+        "type": "text",
     },
     {
         "id": "A4",
         "section": "Business Overview",
         "label": "How large is your user/customer base?",
-        "type": "text"
+        "type": "text",
     },
-
     # B. DATA FOUNDATION READINESS
     {
         "id": "B1",
@@ -33,7 +32,7 @@ QUESTIONS = [
         "type": "multi_choice",
         "options": ["Databases", "Cloud storage", "Spreadsheets", "Legacy apps"],
         "dimension": "data",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "B2",
@@ -42,7 +41,7 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Fully structured", "Partially structured", "Mostly unstructured"],
         "dimension": "data",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "B3",
@@ -51,7 +50,7 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Yes", "No", "Planning"],
         "dimension": "data",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "B4",
@@ -59,7 +58,7 @@ QUESTIONS = [
         "label": "How confident are you in your data quality and accuracy?",
         "type": "rating",
         "dimension": "data",
-        "weight": 2.0
+        "weight": 2.0,
     },
     {
         "id": "B5",
@@ -67,9 +66,8 @@ QUESTIONS = [
         "label": "Do your teams currently use BI dashboards or analytics tools?",
         "type": "rating",
         "dimension": "adoption",
-        "weight": 1.5
+        "weight": 1.5,
     },
-
     # C. AUTOMATION & PROCESS MATURITY
     {
         "id": "C1",
@@ -78,7 +76,7 @@ QUESTIONS = [
         "type": "rating",
         "dimension": "adoption",
         "weight": 2.0,
-        "invert": True
+        "invert": True,
     },
     {
         "id": "C2",
@@ -87,13 +85,13 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Yes", "No", "Pilot / Limited"],
         "dimension": "adoption",
-        "weight": 1.5
+        "weight": 1.5,
     },
     {
         "id": "C3",
         "section": "Automation & Process Maturity",
         "label": "Where do delays or errors occur frequently?",
-        "type": "text"
+        "type": "text",
     },
     {
         "id": "C4",
@@ -102,7 +100,7 @@ QUESTIONS = [
         "type": "multi_choice",
         "options": ["Finance", "HR", "Operations", "Customer Support", "IT processes"],
         "dimension": "business_fit",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "C5",
@@ -110,9 +108,8 @@ QUESTIONS = [
         "label": "Are your workflows documented and standardized?",
         "type": "rating",
         "dimension": "workforce",
-        "weight": 1.5
+        "weight": 1.5,
     },
-
     # D. APPLICATION & CLOUD READINESS
     {
         "id": "D1",
@@ -121,7 +118,7 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["On-prem", "Cloud", "Hybrid"],
         "dimension": "adoption",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "D2",
@@ -129,7 +126,7 @@ QUESTIONS = [
         "label": "Are your applications API-enabled for integration?",
         "type": "rating",
         "dimension": "adoption",
-        "weight": 1.5
+        "weight": 1.5,
     },
     {
         "id": "D3",
@@ -137,13 +134,13 @@ QUESTIONS = [
         "label": "Do you face issues with speed, scale, or performance?",
         "type": "rating",
         "dimension": "business_fit",
-        "weight": 1.5
+        "weight": 1.5,
     },
     {
         "id": "D4",
         "section": "Application & Cloud Readiness",
         "label": "What modernization initiatives have you planned or started?",
-        "type": "text"
+        "type": "text",
     },
     {
         "id": "D5",
@@ -152,9 +149,8 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Yes", "No", "Experimenting"],
         "dimension": "leadership",
-        "weight": 1.0
+        "weight": 1.0,
     },
-
     # E. AI OPPORTUNITY & READINESS
     {
         "id": "E1",
@@ -163,7 +159,7 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Yes", "No", "Pilot / POC"],
         "dimension": "adoption",
-        "weight": 1.5
+        "weight": 1.5,
     },
     {
         "id": "E2",
@@ -171,11 +167,16 @@ QUESTIONS = [
         "label": "Which areas do you believe AI can impact most?",
         "type": "multi_choice",
         "options": [
-            "Customer service", "Predictive maintenance", "Sales & marketing",
-            "Fraud detection", "Personalization", "Operations", "IT service management"
+            "Customer service",
+            "Predictive maintenance",
+            "Sales & marketing",
+            "Fraud detection",
+            "Personalization",
+            "Operations",
+            "IT service management",
         ],
         "dimension": "business_fit",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "E3",
@@ -183,11 +184,14 @@ QUESTIONS = [
         "label": "What type of AI use cases are you interested in?",
         "type": "multi_choice",
         "options": [
-            "Generative AI", "Predictive analytics", "Recommendation engines",
-            "Chatbots / Virtual agents", "Document processing"
+            "Generative AI",
+            "Predictive analytics",
+            "Recommendation engines",
+            "Chatbots / Virtual agents",
+            "Document processing",
         ],
         "dimension": "business_fit",
-        "weight": 1.0
+        "weight": 1.0,
     },
     {
         "id": "E4",
@@ -196,15 +200,20 @@ QUESTIONS = [
         "type": "single_choice",
         "options": ["Strong team", "Basic knowledge", "Exploring", "None"],
         "dimension": "workforce",
-        "weight": 2.0
+        "weight": 2.0,
     },
     {
         "id": "E5",
         "section": "AI Opportunity & Readiness",
         "label": "How urgent is your AI initiative?",
         "type": "single_choice",
-        "options": ["Immediate", "Within 3 months", "Within 6–12 months", "Just exploring"],
+        "options": [
+            "Immediate",
+            "Within 3 months",
+            "Within 6–12 months",
+            "Just exploring",
+        ],
         "dimension": "leadership",
-        "weight": 1.5
-    }
+        "weight": 1.5,
+    },
 ]
